@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多网页显示</title>
+</head>
+<body>
+    <div>
+        <iframe loading="lazy" src="multiFram.html" width="200" height="200" frameborder="0"></iframe>
+        <iframe loading="lazy"
+                src="http://localhost:63342/runoob.html/runoob.html?_ijt=g2a5mj31s2filt145r9l04gomm&_ij_reload"
+                width="600" height="400"
+                frameborder="0"
+                name="poem"></iframe>
+        <a href="http://localhost:63342/runoob.html/runoob.html?_ijt=g2a5mj31s2filt145r9l04gomm&_ij_reload"
+           target="poem">点击刷新</a>
+    </div>
+    <div>
+        <script>
+            document.write("<p>hello world!</p>")
+        </script>
+    </div>
+    <!--JavaScrip事件响应-->
+    <div>
+        <p id="demo">
+        JavaScript 可以触发事件，就像按钮点击。</p>
+        <script>
+        function myFunction1()
+        {
+            document.getElementById("demo").innerHTML="Hello JavaScript!";
+
+        }
+        </script>
+        <button type="button" onclick="myFunction1()">点我</button>
+
+        <p id="style">JavaScript 能改变 HTML 元素的样式。&sect;</p>
+        <script>
+            function myFunction2()
+            {
+                x=document.getElementById("style") // 找到元素
+                x.style.color="#ff0000";          // 改变样式
+            }
+        </script>
+        <button type="button" onclick="myFunction2()">点击这里</button>
+    </div>
+    <div>
+        <nl>
+            <li>apple</li>
+            <li>banana</li>
+        </nl>
+    </div>
+</body>
+</html>
