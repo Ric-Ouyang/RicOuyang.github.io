@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <!--link 在title左侧显示logo-->
+    <link rel="icon", href="E:\HTMLproject\2-layout\orange.png">
+    <title>用户主页</title>
+</head>
+
+<body>
+
+    <div id="container" style="width:1350px">
+
+        <div id="header" style="background-color:#FFA500;height:80px;text-align:center;">
+            <h1 style="margin-bottom:0;">主要的网页标题</h1></div>
+
+        <div id="menu" style="background-color:#FFD700;height:500px;width:300px;float:left;text-align:center;">
+            <b>菜单</b><br>
+            HTML<br>
+            CSS<br>
+            JavaScript<br><br>
+
+            <!--<fieldset>定义一组相关的表单元素并用外框包围-->
+            <fieldset>
+                <legend>用户登录信息</legend>
+
+                <!--创建供用户输入并提交表单-->
+                <form name="input" action="html_form_action.php" method="get" style="text-align:center;">
+                    Name    : <input type="text" name="Name"><br>
+                    Password: <input type="password" name="pwd">
+
+                    <!--单选框 type="radio"-->
+                    <label for="male">Male</label>
+                    <input type="radio" name="sex" value="male" id="male"><br>
+                    <label for="female">Female</label>
+                    <input type="radio" name="sex" value="female" id="female"><br>
+
+                    <!--性别下拉选择框-->
+                    <select>
+                        <option name="sex2" value="Male">male</option>
+                        <option name="sex2" value="Female">female</option>
+                    </select>
+
+                    <!--提交表单-->
+                    <input type="submit" value="Submit">
+                </form>
+            </fieldset><br>
+
+            <!--搜索框<datalist>指定一个预先定义的输入控件选项列表-->
+            <input list="browsers" name="Search">
+                <datalist id="browsers">
+                  <option value="Internet Explorer">
+                  <option value="Firefox">
+                  <option value="Chrome">
+                  <option value="Opera">
+                  <option value="Safari">
+                </datalist>
+            <input type="submit" value="Search">
+        </div>
+
+        <div id="content" style="background-color:#EEEEEE;height:500px;width:1050px;float:left;">
+
+
+        </div>
+
+        <div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+        版权 © Ric.com</div>
+
+    </div>
+
+</body>
+</html>
