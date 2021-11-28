@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*设置导航栏*/
+        .navigator{
+            width: 100%;
+            background-color: #336699;
+            overflow: hidden;  /*隐藏溢出*/
+            position: sticky;  /*粘性导航栏*/
+            top: 0;
+        }
+        /*无序列表装导航栏*/
+        .navigator ul{
+            list-style-type: none;  /*清除列表标号样式*/
+            margin: 0;
+            padding: 0;
+            border-top: 2px solid;
+            border-radius: 20px 20px 0px 0px;  /*圆角边框*/
+            overflow: hidden;
+        }
+        /*所有列表项浮动，排列在同一水平面*/
+        .navigator li{
+            float: left;
+        }
+        /*设置导航链接样式*/
+        .navigator li a, .dropbtn{
+            display: block;
+            color: #f2f2f2;
+            text-decoration: none;
+            text-align: center;
+            padding: 14px 25px;
+            border-right: #CCFFFF;
+        }
+
+        /*悬停在非active链接时更改颜色*/
+        .navigator li a:hover:not(.active) {
+            background-color: #CCFFFF;
+            color: black;
+        }
+        .navigator .active {
+            background-color: #CCFFFF;
+            color: black;
+        }
+
+
+        /*div容器放置下拉内容*/
+        .dropdown{
+            display: inline-block;
+        }
+        /*隐藏下拉内容*/
+        .dropdown-content{
+            display: none;
+            position: relative;
+            background-color: #99CCFF;
+            width: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        /*下拉链接*/
+        .dropdown-content a{
+            display: block;
+            padding: 16px 10px;
+            text-decoration: none;
+            text-align: center;
+        }
+        /*悬停下拉内容时时改变下拉内容颜色*/
+        .dropdown-content a:hover{
+            background-color: #CCFFFF;
+            color: black;
+        }
+        /*悬停时显示下拉菜单*/
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigator">
+        <ul>
+            <li><a class=active href="#home">Home</a></li>
+            <li><a href="#News">News</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Function</a>
+                <div class="dropdown-content">
+                    <a href="#">function 1</a>
+                    <a href="#">function 2</a>
+                    <a href="#">function 3</a>
+                </div>
+            </li>
+            <li style="float: right"><a href="#About" style="float: right;">About</a></li>
+        </ul>
+    </div>
+</body>
+</html>

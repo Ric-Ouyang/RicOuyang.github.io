@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    background-color: #d0e8ff;
+}
+
+/*设置页眉*/
+.header{
+    padding: 25px;
+    height: 150px;
+    width: 100%;
+    text-align: center;
+    background-color: #336699;
+}
+.header img{
+    width: 100px;
+    height: 100px;
+    display: inline;
+}
+.header h1{
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    opacity: 0.9;
+    display: inline;
+    position: relative;  /*相对位置，相对于与img平行的bottom向上移动37.5px*/
+    bottom: 37.5px;
+}
+.header p{
+    color: white;
+    font-weight: normal;
+    font-size: 10px;
+    opacity: 0.8;
+    display: inline;
+    position: relative;  /*相对位置，相对于与img平行的bottom向上移动10px,向右移动140px*/
+    right: 140px;
+    bottom: 10px;
+}
+
+
+/*****设置导航栏*****/
+
+.navigator{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #336699;
+    position: sticky;  /*粘性导航栏*/
+    top: 0;
+}
+/*无序列表装导航栏*/
+.navigator ul{
+    list-style-type: none;  /*清除列表标号样式*/
+    margin: 0;
+    padding: 0;
+    border-top: 2px solid;
+    border-radius: 20px 20px 0px 0px;  /*圆角边框*/
+    overflow: hidden;
+}
+/*所有列表项浮动，排列在同一水平面*/
+.navigator li{
+    float: left;
+    border-right: solid #174169 1px;  /*列表项右边框*/
+}
+li:last-child{
+    border-right: none;  /*选择最后一个child清除边框*/
+}
+/*设置导航链接样式*/
+.navigator li a{
+    display: inline-block;
+    color: #f2f2f2;
+    font-size: 20px;  /*设置字体大小，粗细*/
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    text-align: center;
+    padding: 14px 25px;
+}
+
+/*悬停在非active链接时更改颜色*/
+.navigator li a:hover:not(.active), .dropdown:hover .dropbtn{
+    background-color: #CCFFFF;
+    color: black;
+}
+.navigator .active {
+    background-color: #CCFFFF;
+    color: black;
+}
+
+
+/*div容器放置下拉内容*/
+.navigator .dropdown{
+    display: block;
+}
+/*隐藏下拉内容*/
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #99CCFF;
+    width: 138.44px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+/*下拉链接*/
+.navigator li .dropdown-content a{
+    display: block;
+    padding: 16px 10px;
+    text-decoration: none;
+    text-align: center;
+}
+/*悬停下拉内容时时改变下拉内容颜色*/
+.dropdown-content a:hover{
+    background-color: #CCFFFF;
+    color: black;
+}
+/*悬停时显示下拉菜单*/
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+/*****内容栏布局*****/
+.left-content{
+    width: 70%;
+    float: left;
+}
+.right-content{
+    width: 30%;
+    float: left;
+    padding-left: 20px;
+}
+/*清除列之后的浮动*/
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+/*卡片效果*/
+.card{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 40px 20px;
+    background-color: #6699CC;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* 伪图像 */
+.fakeimage {
+    background-color: rgba(221, 221, 221, 0.8);
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+/*****主内容栏***/
+.left-content p{
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    word-spacing: 2px;
+    text-align: justify; /*拉伸，使每一行宽度都相等*/
+}
+
+
+
+/***页脚****/
+.footer {
+    padding: 1px;
+    height: 100px;
+    text-align: center;
+    background: rgba(221, 221, 221, 0.7);
+    margin-top: 10px;
+  }
